@@ -1,13 +1,12 @@
 provider "aws" {
-version = "1.51.0"
-access_key = ""
-secret_key = ""
-region = "us-east-1"
+region = "${var.region}"
+shared_credentials_file = "${var.shared_credentials_file}"
+profile = "${var.profile}"
 }
 
 resource "aws_instance" "ec2" {
-ami = "ami-009d6802948d06e52"
-instance_type = "t2.micro"
+ami = "${var.ami}"
+instance_type = "${var.instance_type}"
 tags {
 Name = "dev-kishore-test-server"
 }
