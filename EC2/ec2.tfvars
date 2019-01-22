@@ -1,4 +1,4 @@
-region = "us-east-1"
+region = "ap-south-1"
 ami = "ami-009d6802948d06e52"
 instance_type = "t2.micro"
 profile = "terraform_own"
